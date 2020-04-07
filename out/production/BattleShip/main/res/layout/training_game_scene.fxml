@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import battleship.controls.OceanTable?>
+<BorderPane xmlns="http://javafx.com/fxml"
+            id="parent"
+>
+    <center>
+        <OceanTable id="ocean"
+                    BorderPane.alignment="CENTER"
+                    minWidth="200"
+                    minHeight="200"
+        >
+        </OceanTable>
+    </center>
+    <bottom>
+        <TextArea>
+
+        </TextArea>
+    </bottom>
+    <right>
+        <VBox spacing="10">
+            <Button text="restart game">
+            </Button>
+            <Button text="back to menu">
+            </Button>
+        </VBox>
+    </right>
+</BorderPane>
