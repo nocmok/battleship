@@ -1,5 +1,7 @@
 package battleship;
 
+import battleship.controls.ShipPane;
+import battleship.game.Ship;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -15,15 +17,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        URL url = Thread.currentThread().getContextClassLoader().getResource("training_game_scene.fxml");
-        Scene scene = new TrainingGame(this);
+        Scene scene = new TrainingGame();
+        primaryStage.setWidth(720);
+        primaryStage.setHeight(720);
+        primaryStage.setMinWidth(720);
+        primaryStage.setMaxWidth(720);
+        primaryStage.setMinHeight(480);
+        primaryStage.setMaxHeight(480);
         primaryStage.setScene(scene);
         primaryStage.show();
 
-//        URL url = Thread.currentThread().getContextClassLoader().getResource("hit.png");
-//        Image hitImage = new Image(url.toString());
-//        ImageView imageView = new ImageView(hitImage);
-//        primaryStage.setScene(new Scene(new StackPane(imageView), 200, 200));
+//        ShipPane pane = new ShipPane();
+//        primaryStage.setScene(new Scene(new StackPane(pane), 200, 200));
+//        pane.setImage(ShipPane.hitImage);
 //        primaryStage.show();
     }
 

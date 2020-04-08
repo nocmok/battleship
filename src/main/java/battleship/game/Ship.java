@@ -74,7 +74,7 @@ public abstract class Ship {
 
     }
 
-    private int transformCoordinates(int row, int col) {
+    public int transformCoordinates(int row, int col) {
         return horizontal ? col - bowColumn : row - bowRow;
     }
 

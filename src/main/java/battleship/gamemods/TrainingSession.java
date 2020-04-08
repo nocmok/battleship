@@ -1,34 +1,76 @@
 package battleship.gamemods;
 
 import battleship.game.Ocean;
-import battleship.player.WhippingPlayer;
+import battleship.game.Ship;
 
-public class TrainingSession extends GameSession<WhippingPlayer> {
+public class TrainingSession {
+    private Ocean ocean = new Ocean();
+    private int shotsFired = 0;
+    private int hits = 0;
+    private int shipsSunk = 0;
+
 
     public TrainingSession() {
 
     }
 
-    @Override
-    public void addPlayer(WhippingPlayer player) {
-        if (players.size() > 0) {
-            throw new RuntimeException("attempt to add extra player to training game");
+    public void reinitSession() {
+        ocean.clearOcean();
+        ocean.placeAllShipsRandomly();
+    }
+
+    public int shotAt(int row, int column) {
+        shotsFired += 1;
+        int res = ocean.shotAt(row, column);
+        if (res == Ocean.SUNK) {
+            hits += 1;
+            shipsSunk += 1;
+            markSurroundings(ocean, ocean.getShipArray()[row][column]);
         }
-        players.add(player);
+        if (res == Ocean.HIT) {
+            hits += 1;
+        }
+        return res;
     }
 
-    @Override
-    public void initSession() {
-        players.get(0).getOcean().placeAllShipsRandomly();
+    private void markSurroundings(Ocean ocean, Ship ship) {
+        int rectX = Math.max(0, ship.getBowColumn() - 1);
+        int rectY = Math.max(0, ship.getBowRow() - 1);
+
+        int rectW;
+        int rectH;
+
+        if (ship.isHorizontal()) {
+            rectW = 1 + Math.min(9, ship.getBowColumn() + ship.getLength()) - rectX;
+            rectH = 1 + Math.min(9, ship.getBowRow() + 1) - rectY;
+        } else {
+            rectW = 1 + Math.min(9, ship.getBowColumn() + 1) - rectX;
+            rectH = 1 + Math.min(9, ship.getBowRow() + ship.getLength()) - rectY;
+        }
+
+        for (int i = 0; i < rectH; ++i) {
+            for (int j = 0; j < rectW; ++j) {
+                Ship s = ocean.getShipArray()[rectY + i][rectX + j];
+                if (s.getShipType() == Ship.EMPTY_SEA) {
+                    s.shotAt(rectY + i, rectX + j);
+                }
+            }
+        }
     }
 
-    @Override
-    public void play() {
-
+    public int getShotsFired() {
+        return shotsFired;
     }
 
-    @Override
-    public void stop() {
+    public int getHits() {
+        return hits;
+    }
 
+    public int getShipsSunk() {
+        return shipsSunk;
+    }
+
+    public Ocean getOcean() {
+        return ocean;
     }
 }

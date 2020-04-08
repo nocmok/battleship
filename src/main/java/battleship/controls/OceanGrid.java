@@ -1,11 +1,8 @@
 package battleship.controls;
 
-import battleship.player.Bundle;
-import battleship.player.Player;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
-import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -13,26 +10,22 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
-import javafx.scene.shape.Rectangle;
 
-public class OceanTable extends GridPane {
+public class OceanGrid extends GridPane {
     private static final int DEFAULT_ROWS = 10;
     private static final int DEFAULT_COLS = 10;
-
-    private Image emptyImage;
 
     private final int cols;
     private final int rows;
 
-    public OceanTable() {
+    public OceanGrid() {
         this(DEFAULT_ROWS, DEFAULT_COLS);
     }
 
-    public OceanTable(int rows, int cols) {
+    public OceanGrid(int rows, int cols) {
         super();
         this.rows = rows;
         this.cols = cols;
-        this.emptyImage = new Image("empty.png", true);
         makeGrid(rows, cols);
         setGridLinesVisible(true);
     }
@@ -52,14 +45,7 @@ public class OceanTable extends GridPane {
 
         for (int i = 0; i < rows; ++i) {
             for (int j = 0; j < cols; ++j) {
-                ImageView imageView = new ImageView(emptyImage);
-
-                BorderPane pane = new BorderPane();
-                imageView.fitWidthProperty().bind(pane.widthProperty());
-                imageView.fitHeightProperty().bind(pane.heightProperty());
-
-                pane.setCenter(imageView);
-
+                ShipPane pane = new ShipPane();
                 setFillWidth(pane, true);
                 setFillHeight(pane, true);
                 add(pane, i, j);
