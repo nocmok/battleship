@@ -9,18 +9,31 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 
-import java.util.List;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 
 public class TrainingGame extends Scene {
     private TrainingSession session;
     private OceanGrid oceanGrid;
 
+    private static final StackPane placeHolder = new StackPane(new Label("unable to access layout"));
+
     public TrainingGame() throws Exception {
-        super(FXMLLoader.load(Thread.currentThread().getContextClassLoader().getResource("training_game_scene.fxml")));
+        super(placeHolder);
+
+        URL url = Thread.currentThread().getContextClassLoader().getResource("training_game_scene.fxml");
+        if (url == null || !new File(url.getPath()).exists()) {
+            return;
+        }
+        setRoot(FXMLLoader.load(url));
 
         session = new TrainingSession();
         session.reinitSession();
@@ -32,16 +45,15 @@ public class TrainingGame extends Scene {
         restart.addEventHandler(MouseEvent.MOUSE_CLICKED, this::onRestartClicked);
     }
 
-    private Image getImageForStatus(int status) {
+    private Image getImageForStatus(int status, boolean isHorizontal) {
         switch (status) {
         case Ocean.HIT:
             return ShipPane.hitImage;
         case Ocean.MISS:
             return ShipPane.missImage;
         case Ocean.SUNK:
-            return ShipPane.sunkImage;
+            return isHorizontal ? ShipPane.sunkHorizontalImage : ShipPane.sunkVerticalImage;
         case Ocean.UNTOUCHED:
-            return ShipPane.emptyImage;
         default:
             return null;
         }
@@ -67,7 +79,7 @@ public class TrainingGame extends Scene {
             Integer row = GridPane.getRowIndex(child);
             Integer col = GridPane.getColumnIndex(child);
             if (row != null && col != null) {
-                Image img = getImageForStatus(ocean.getCellStatus(row, col));
+                Image img = getImageForStatus(ocean.getCellStatus(row, col), ocean.getShipArray()[row][col].isHorizontal());
                 ((ShipPane) child).setImage(img);
             }
         }

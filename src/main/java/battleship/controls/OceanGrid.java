@@ -59,15 +59,6 @@ public class OceanGrid extends GridPane {
         }
     }
 
-    public Node getNode(int row, int column) {
-        for (var child : getChildren()) {
-            if (GridPane.getRowIndex(child) == row && GridPane.getColumnIndex(child) == column) {
-                return child;
-            }
-        }
-        return null;
-    }
-
     public int columns() {
         return cols;
     }

@@ -4,29 +4,71 @@
 <?import javafx.scene.layout.*?>
 
 <?import battleship.controls.OceanGrid?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.text.Text?>
+
+<?import java.net.URL?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <BorderPane xmlns="http://javafx.com/fxml"
-            id="parent">
-    <center>
-        <OceanGrid id="ocean"
-                   minWidth="200"
-                   minHeight="200"
-                   maxWidth="200"
-                   maxHeight="200"
-                   BorderPane.alignment="CENTER">
-        </OceanGrid>
-    </center>
-    <right>
-        <VBox spacing="10"
-              maxWidth="200"
+            id="parent"
+            prefWidth="480"
+            prefHeight="720"
+            stylesheets="@style.css">
+
+    <top>
+        <HBox prefHeight="100"
+              spacing="20"
               alignment="CENTER">
-            <Button id="restart"
-                    text="restart game">
-            </Button>
-            <Button id="back"
-                    text="back to menu">
-            </Button>
-            <TextArea id="console">
+            <padding>
+                <Insets top="50"/>
+            </padding>
+            <ImageView>
+                <Image url="@nautic.png" requestedHeight="50" requestedWidth="50" smooth="true"/>
+            </ImageView>
+            <Label style="-fx-font-family: Consolas; -fx-font-size: 22; -fx-text-fill: white" text="battle-ship"/>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER"
+              fillHeight="false">
+            <OceanGrid styleClass="grid-pane" id="ocean"
+                       prefWidth="300"
+                       prefHeight="300">
+            </OceanGrid>
+        </HBox>
+    </center>
+    <bottom>
+        <VBox alignment="TOP_CENTER"
+              fillWidth="false">
+            <TextArea
+                    prefWidth="300"
+                    prefHeight="150">
+                <VBox.margin>
+                    <Insets left="20" right="20"/>
+                </VBox.margin>
             </TextArea>
+            <HBox prefHeight="100"
+                  alignment="CENTER">
+                <Button id="back"
+                        text="[- back]"
+                        prefHeight="40">
+                    <HBox.margin>
+                        <Insets right="20"/>
+                    </HBox.margin>
+                </Button>
+                <Button id="restart"
+                        text="[x restart]"
+                        prefHeight="40">
+                    <HBox.margin>
+                        <Insets left="20"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
         </VBox>
-    </right>
+    </bottom>
 </BorderPane>

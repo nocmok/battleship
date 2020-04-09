@@ -1,0 +1,73 @@
+/*#37474f #b0bec5*/
+
+/** fonts
+ background #C7EBFF
+ foreground #1273EB
+ */
+{
+    deepGray: #1a1a1d
+;
+    deeepGray: #111112
+;
+    smoke: #4e4e50
+;
+    blood: #c3073f
+;
+}
+
+.root {
+    -fx-background-color: deepGray;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-font-size: 15;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: transparent;
+    -fx-font-size: 15;
+    -fx-text-fill: blood;
+}
+
+.grid-pane Line {
+    -fx-stroke: smoke;
+    -fx-stroke-width: 1;
+}
+
+.grid-pane {
+    -fx-background-color: deepGray;
+}
+
+.text-area {
+    -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
+    -fx-border-radius: 25, 25, 25, 25;
+    -fx-font-size: 15;
+    -fx-text-fill: blood;
+    -fx-font-family: Consolas;
+}
+
+.text-area .content {
+    -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
+    -fx-border-radius: 25, 25, 25, 25;
+    -fx-font-size: 15;
+    -fx-text-fill: blood;
+    -fx-font-family: Consolas;
+}
+
+.text-area:focused {
+    -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
+    -fx-border-radius: 25, 25, 25, 25;
+    -fx-font-size: 15;
+    -fx-text-fill: blood;
+    -fx-font-family: Consolas;
+}
+
+.text-area:focused .content {
+    -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
+    -fx-border-radius: 25, 25, 25, 25;
+    -fx-font-size: 15;
+    -fx-text-fill: blood;
+    -fx-font-family: Consolas;
+}
