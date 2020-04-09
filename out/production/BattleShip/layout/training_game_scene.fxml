@@ -25,7 +25,7 @@
               spacing="20"
               alignment="CENTER">
             <padding>
-                <Insets top="50"/>
+                <Insets top="30"/>
             </padding>
             <ImageView>
                 <Image url="@nautic.png" requestedHeight="50" requestedWidth="50" smooth="true"/>
@@ -54,8 +54,11 @@
             <Label id="info"
                    prefWidth="300"
                    prefHeight="100"
+                   alignment="TOP_LEFT"
                    mouseTransparent="true">
-
+                <padding>
+                    <Insets left="5" top="5"/>
+                </padding>
             </Label>
             <TextField
                     id="console"

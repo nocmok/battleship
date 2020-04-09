@@ -54,8 +54,11 @@
             <Label id="info"
                    prefWidth="300"
                    prefHeight="100"
+                   alignment="TOP_LEFT"
                    mouseTransparent="true">
-
+                <padding>
+                    <Insets left="5" top="5"/>
+                </padding>
             </Label>
             <TextField
                     id="console"

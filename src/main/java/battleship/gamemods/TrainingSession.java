@@ -17,6 +17,9 @@ public class TrainingSession {
     }
 
     public void reinitSession() {
+        shotsFired = 0;
+        hits = 0;
+        shipsSunk = 0;
         ocean.clearOcean();
         ocean.placeAllShipsRandomly();
     }
