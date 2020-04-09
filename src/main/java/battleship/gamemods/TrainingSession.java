@@ -24,19 +24,18 @@ public class TrainingSession {
         ocean.placeAllShipsRandomly();
     }
 
-    public Rectangle shotAt(int row, int column) {
-        Rectangle rect = new Rectangle(column, row, 1, 1);
+    public int shotAt(int row, int column) {
         shotsFired += 1;
         int res = ocean.shotAt(row, column);
         if (res == Ocean.SUNK) {
             hits += 1;
             shipsSunk += 1;
-            rect = markSurroundings(ocean, ocean.getShipArray()[row][column]);
+            markSurroundings(ocean, ocean.getShipArray()[row][column]);
         }
         if (res == Ocean.HIT) {
             hits += 1;
         }
-        return rect;
+        return res;
     }
 
     private Rectangle markSurroundings(Ocean ocean, Ship ship) {

@@ -13,6 +13,7 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
+<?import battleship.controls.NumericGrid?>
 <?import battleship.controls.Grid?>
 <BorderPane xmlns="http://javafx.com/fxml"
             id="parent"
@@ -37,13 +38,21 @@
     <center>
         <StackPane maxWidth="360"
                    maxHeight="360">
-            <Grid styleClass="grid">
-            </Grid>
             <OceanGrid styleClass="ocean-grid"
                        id="ocean"
                        maxWidth="300"
                        maxHeight="300">
             </OceanGrid>
+            <NumericGrid styleClass="numeric-grid"
+                         mouseTransparent="true"
+                         maxWidth="360"
+                         maxHeight="360">
+            </NumericGrid>
+            <Grid styleClass="grid"
+                  mouseTransparent="true"
+                  maxWidth="300"
+                  maxHeight="300">
+            </Grid>
         </StackPane>
     </center>
 
@@ -51,14 +60,24 @@
         <VBox alignment="TOP_CENTER"
               fillWidth="false"
               spacing="20">
-            <Label id="info"
-                   prefWidth="300"
-                   prefHeight="120"
-                   alignment="TOP_LEFT">
+            <HBox id="status-box"
+                  prefWidth="300"
+                  prefHeight="120">
                 <padding>
-                    <Insets left="5" top="5"/>
+                    <Insets left="5" top="5" bottom="5" right="5"/>
                 </padding>
-            </Label>
+                <Label id="info"
+                       prefWidth="150"
+                       wrapText="true"
+                       alignment="TOP_LEFT">
+                </Label>
+                <TextArea id="log"
+                          prefWidth="150"
+                          wrapText="true"
+                          editable="false">
+
+                </TextArea>
+            </HBox>
             <TextField
                     id="console"
                     prefWidth="300"
@@ -67,14 +86,14 @@
             <HBox prefHeight="100"
                   alignment="CENTER">
                 <Button id="back"
-                        text="[- back]"
+                        text="[# back]"
                         prefHeight="40">
                     <HBox.margin>
                         <Insets right="20"/>
                     </HBox.margin>
                 </Button>
                 <Button id="restart"
-                        text="[x restart]"
+                        text="[# restart]"
                         prefHeight="40">
                     <HBox.margin>
                         <Insets left="20"/>

@@ -27,7 +27,6 @@ public class OceanGrid extends GridPane {
         this.rows = rows;
         this.cols = cols;
         makeGrid(rows, cols);
-        setGridLinesVisible(true);
     }
 
     private void makeGrid(int rows, int cols) {

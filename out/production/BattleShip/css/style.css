@@ -13,7 +13,7 @@
     -fx-background-color: deepGray;
 }
 
-.label{
+.label {
     -fx-font-family: Consolas;
 }
 
@@ -35,12 +35,12 @@
     -fx-background-color: deeepGray;
 }
 
-.ocean-grid Line {
+.grid Line {
     -fx-stroke: smoke;
     -fx-stroke-width: 0.8;
 }
 
-.grid Label{
+.numeric-grid Label {
     -fx-font-family: Consolas;
     -fx-font-weight: normal;
     -fx-text-fill: smoke;
@@ -55,7 +55,25 @@
     -fx-font-family: Consolas;
 }
 
-#info{
+.text-area, .text-area .content, .text-area:focused, .text-area:focused .content {
+    -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
+    -fx-border-width: 0, 0, 0, 0;
+    -fx-font-size: 15;
+    -fx-text-fill: blood;
+    -fx-font-family: Consolas;
+}
+
+.text-area .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-pref-width: 0;
+}
+
+.text-area .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
+
+#info {
     -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
     -fx-border-radius: 25, 25, 25, 25;
     -fx-font-family: Consolas;
@@ -63,10 +81,15 @@
     -fx-font-size: 15;
 }
 
-#title{
+#title {
     -fx-font-family: Consolas;
     -fx-font-size: 24;
     -fx-text-fill: white;
+}
+
+#status-box {
+    -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
+    -fx-border-radius: 25, 25, 25, 25;
 }
 
 .menu-buttons {
@@ -76,8 +99,7 @@
     -fx-text-fill: white;
 }
 
-
-.menu-buttons:hover{
+.menu-buttons:hover {
     -fx-background-color: transparent;
     -fx-font-size: 24;
     -fx-text-fill: blood;

@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
@@ -29,6 +30,7 @@ public class TrainingGameScene extends Scene {
     private TrainingSession session;
     private OceanGrid oceanGrid;
     private Label info;
+    private TextArea log;
 
     public TrainingGameScene() throws Exception {
         super(placeHolder);
@@ -54,6 +56,8 @@ public class TrainingGameScene extends Scene {
         console.addEventHandler(KeyEvent.KEY_PRESSED, this::onKeyPressed);
 
         info = (Label) lookup("#info");
+
+        log = (TextArea) lookup("#log");
 
         restartGame();
     }
@@ -97,8 +101,9 @@ public class TrainingGameScene extends Scene {
 
     private void restartGame() {
         session.reinitSession();
+        log.clear();
         info.setText(getInfo());
-        drawOcean(session.getOcean(), new Rectangle(0, 0, 10, 10));
+        drawOcean(session.getOcean());
     }
 
     private void onRestartClicked(MouseEvent e) {
@@ -119,15 +124,32 @@ public class TrainingGameScene extends Scene {
         info.setText(congrats + getInfo());
     }
 
+    private String shotStatusToString(int status) {
+        switch (status) {
+        case Ocean.MISS:
+            return "miss";
+        case Ocean.HIT:
+            return "hit";
+        case Ocean.SUNK:
+            return "sunk";
+        default:
+            return "wtf";
+        }
+    }
+
+    private void logShot(int row, int col, int status) {
+        log.appendText(String.format("[%d, %d] -> %s%n", row, col, shotStatusToString(status)));
+    }
+
     private void performShot(int row, int col) {
         if (!session.isGameOver()) {
-            Rectangle rect = session.shotAt(row, col);
+            logShot(row, col, session.shotAt(row, col));
             if (session.isGameOver()) {
                 congratulate();
             } else {
                 info.setText(getInfo());
             }
-            drawOcean(session.getOcean(), rect);
+            drawOcean(session.getOcean());
         }
     }
 
@@ -152,11 +174,11 @@ public class TrainingGameScene extends Scene {
         }
     }
 
-    private void drawOcean(Ocean ocean, Rectangle rect) {
+    private void drawOcean(Ocean ocean) {
         for (var child : oceanGrid.getChildren()) {
             Integer row = GridPane.getRowIndex(child);
             Integer col = GridPane.getColumnIndex(child);
-            if (row != null && col != null && rect.contains(col, row)) {
+            if (row != null && col != null) {
                 Image img = getImageForStatus(ocean.getCellStatus(row, col), ocean.getShipArray()[row][col].isHorizontal());
                 ((ShipPane) child).setImage(img);
             }

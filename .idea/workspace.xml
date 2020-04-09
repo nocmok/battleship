@@ -6,7 +6,27 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/TrainingGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/battleship/TrainingGameScene.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/Grid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/OceanGrid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/OceanGrid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/gamemods/TrainingSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/battleship/gamemods/TrainingSession.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/layout/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/layout/training_game_scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/main/res/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/layout/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/main/res/layout/training_game_scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/res/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/layout/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/res/layout/training_game_scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/training_game_scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/TrainingGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/TrainingGameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/controls/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/controls/NumericGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/controls/OceanGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/controls/OceanGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/gamemods/TrainingSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/gamemods/TrainingSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/training_game_scene.fxml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +234,7 @@
       <workItem from="1586345806221" duration="35000" />
       <workItem from="1586346950263" duration="42409000" />
       <workItem from="1586431912151" duration="12544000" />
+      <workItem from="1586451041919" duration="5682000" />
     </task>
     <servers />
   </component>
