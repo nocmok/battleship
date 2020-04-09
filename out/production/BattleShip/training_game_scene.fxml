@@ -46,6 +46,7 @@
         <VBox alignment="TOP_CENTER"
               fillWidth="false">
             <TextArea
+                    id="console"
                     prefWidth="300"
                     prefHeight="150">
                 <VBox.margin>

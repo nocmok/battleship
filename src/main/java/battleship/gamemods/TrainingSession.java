@@ -3,6 +3,8 @@ package battleship.gamemods;
 import battleship.game.Ocean;
 import battleship.game.Ship;
 
+import java.awt.*;
+
 public class TrainingSession {
     private Ocean ocean = new Ocean();
     private int shotsFired = 0;
@@ -19,43 +21,43 @@ public class TrainingSession {
         ocean.placeAllShipsRandomly();
     }
 
-    public int shotAt(int row, int column) {
+    public Rectangle shotAt(int row, int column) {
+        Rectangle rect = new Rectangle(column, row, 1, 1);
         shotsFired += 1;
         int res = ocean.shotAt(row, column);
         if (res == Ocean.SUNK) {
             hits += 1;
             shipsSunk += 1;
-            markSurroundings(ocean, ocean.getShipArray()[row][column]);
+            rect = markSurroundings(ocean, ocean.getShipArray()[row][column]);
         }
         if (res == Ocean.HIT) {
             hits += 1;
         }
-        return res;
+        return rect;
     }
 
-    private void markSurroundings(Ocean ocean, Ship ship) {
-        int rectX = Math.max(0, ship.getBowColumn() - 1);
-        int rectY = Math.max(0, ship.getBowRow() - 1);
-
-        int rectW;
-        int rectH;
+    private Rectangle markSurroundings(Ocean ocean, Ship ship) {
+        Rectangle rect = new Rectangle();
+        rect.x = Math.max(0, ship.getBowColumn() - 1); // 0
+        rect.y = Math.max(0, ship.getBowRow() - 1); // 8
 
         if (ship.isHorizontal()) {
-            rectW = 1 + Math.min(9, ship.getBowColumn() + ship.getLength()) - rectX;
-            rectH = 1 + Math.min(9, ship.getBowRow() + 1) - rectY;
+            rect.width = 1 + Math.min(9, ship.getBowColumn() + ship.getLength()) - rect.x;
+            rect.height = 1 + Math.min(9, ship.getBowRow() + 1) - rect.y;
         } else {
-            rectW = 1 + Math.min(9, ship.getBowColumn() + 1) - rectX;
-            rectH = 1 + Math.min(9, ship.getBowRow() + ship.getLength()) - rectY;
+            rect.width = 1 + Math.min(9, ship.getBowColumn() + 1) - rect.x;
+            rect.height = 1 + Math.min(9, ship.getBowRow() + ship.getLength()) - rect.y;
         }
 
-        for (int i = 0; i < rectH; ++i) {
-            for (int j = 0; j < rectW; ++j) {
-                Ship s = ocean.getShipArray()[rectY + i][rectX + j];
+        for (int i = 0; i < rect.height; ++i) {
+            for (int j = 0; j < rect.width; ++j) {
+                Ship s = ocean.getShipArray()[rect.y + i][rect.x + j];
                 if (s.getShipType() == Ship.EMPTY_SEA) {
-                    s.shotAt(rectY + i, rectX + j);
+                    s.shotAt(rect.y + i, rect.x + j);
                 }
             }
         }
+        return rect;
     }
 
     public int getShotsFired() {
