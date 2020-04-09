@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.Button?>
-<GridPane>
-    <children>
-        <Button text="click" id="button">
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<BorderPane prefHeight="720"
+            prefWidth="480"
+            stylesheets="@style.css">
 
-        </Button>
-    </children>
-</GridPane>
+    <top>
+        <HBox prefHeight="80"
+              spacing="20"
+              alignment="CENTER">
+            <padding>
+                <Insets top="30"/>
+            </padding>
+            <ImageView>
+                <Image url="@nautic.png" requestedHeight="50" requestedWidth="50" smooth="true"/>
+            </ImageView>
+            <Label id="title" text="battle-ship"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20"
+              prefWidth="300"
+              alignment="CENTER">
+
+            <Button styleClass="menu-buttons"
+                    id="pvp-button"
+                    text="[# PvP mode]"
+                    disable="true">
+            </Button>
+            <Button styleClass="menu-buttons"
+                    id="training-button"
+                    text="[# training]">
+            </Button>
+        </VBox>
+    </center>
+</BorderPane>

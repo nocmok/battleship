@@ -21,7 +21,7 @@
             stylesheets="@style.css">
 
     <top>
-        <HBox prefHeight="100"
+        <HBox prefHeight="80"
               spacing="20"
               alignment="CENTER">
             <padding>
@@ -53,9 +53,8 @@
               spacing="20">
             <Label id="info"
                    prefWidth="300"
-                   prefHeight="100"
-                   alignment="TOP_LEFT"
-                   mouseTransparent="true">
+                   prefHeight="120"
+                   alignment="TOP_LEFT">
                 <padding>
                     <Insets left="5" top="5"/>
                 </padding>

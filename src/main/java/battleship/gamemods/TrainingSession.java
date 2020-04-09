@@ -78,4 +78,8 @@ public class TrainingSession {
     public Ocean getOcean() {
         return ocean;
     }
+
+    public boolean isGameOver() {
+        return shipsSunk == 10;
+    }
 }

@@ -19,12 +19,14 @@
 
 .button {
     -fx-background-color: transparent;
+    -fx-font-family: Consolas;
     -fx-font-size: 15;
     -fx-text-fill: white;
 }
 
 .button:hover {
     -fx-background-color: transparent;
+    -fx-font-family: Consolas;
     -fx-font-size: 15;
     -fx-text-fill: blood;
 }
@@ -65,4 +67,18 @@
     -fx-font-family: Consolas;
     -fx-font-size: 24;
     -fx-text-fill: white;
+}
+
+.menu-buttons {
+    -fx-background-color: transparent;
+    -fx-font-family: Consolas;
+    -fx-font-size: 24;
+    -fx-text-fill: white;
+}
+
+
+.menu-buttons:hover{
+    -fx-background-color: transparent;
+    -fx-font-size: 24;
+    -fx-text-fill: blood;
 }

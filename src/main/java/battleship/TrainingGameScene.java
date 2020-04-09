@@ -23,14 +23,14 @@ import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TrainingGame extends Scene {
+public class TrainingGameScene extends Scene {
     private static final StackPane placeHolder = new StackPane(new Label("unable to access layout"));
 
     private TrainingSession session;
     private OceanGrid oceanGrid;
     private Label info;
 
-    public TrainingGame() throws Exception {
+    public TrainingGameScene() throws Exception {
         super(placeHolder);
 
         URL url = Thread.currentThread().getContextClassLoader().getResource("training_game_scene.fxml");
@@ -47,12 +47,20 @@ public class TrainingGame extends Scene {
         Button restart = (Button) lookup("#restart");
         restart.addEventHandler(MouseEvent.MOUSE_CLICKED, this::onRestartClicked);
 
+        Button back = (Button) lookup("#back");
+        back.addEventHandler(MouseEvent.MOUSE_CLICKED, this::onBackButtonClicked);
+
         TextField console = (TextField) lookup("#console");
         console.addEventHandler(KeyEvent.KEY_PRESSED, this::onKeyPressed);
 
         info = (Label) lookup("#info");
 
         restartGame();
+    }
+
+    private void onBackButtonClicked(MouseEvent e) {
+        BattleShipApp app = BattleShipApp.app;
+        app.primaryStage.setScene(app.menuScene);
     }
 
     private boolean validateInteger(String num) {
@@ -106,10 +114,21 @@ public class TrainingGame extends Scene {
                              session.getShotsFired(), session.getHits(), session.getShipsSunk());
     }
 
+    private void congratulate() {
+        String congrats = String.format("===YOU WIN!===%nTOTAL RESULTS :%n");
+        info.setText(congrats + getInfo());
+    }
+
     private void performShot(int row, int col) {
-        Rectangle rect = session.shotAt(row, col);
-        info.setText(getInfo());
-        drawOcean(session.getOcean(), rect);
+        if (!session.isGameOver()) {
+            Rectangle rect = session.shotAt(row, col);
+            if (session.isGameOver()) {
+                congratulate();
+            } else {
+                info.setText(getInfo());
+            }
+            drawOcean(session.getOcean(), rect);
+        }
     }
 
     private void onGridClicked(MouseEvent e) {
