@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -43,7 +44,8 @@ public class TrainingGame extends Scene {
         Button restart = (Button) lookup("#restart");
         restart.addEventHandler(MouseEvent.MOUSE_CLICKED, this::onRestartClicked);
 
-        TextArea console = (TextArea) lookup("#console");
+        TextField console = (TextField) lookup("#console");
+
     }
 
     private Image getImageForStatus(int status, boolean isHorizontal) {

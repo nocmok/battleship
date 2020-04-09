@@ -13,6 +13,7 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
+<?import battleship.controls.Grid?>
 <BorderPane xmlns="http://javafx.com/fxml"
             id="parent"
             prefWidth="480"
@@ -24,35 +25,43 @@
               spacing="20"
               alignment="CENTER">
             <padding>
-                <Insets top="50"/>
+                <Insets top="30"/>
             </padding>
             <ImageView>
                 <Image url="@nautic.png" requestedHeight="50" requestedWidth="50" smooth="true"/>
             </ImageView>
-            <Label style="-fx-font-family: Consolas; -fx-font-size: 22; -fx-text-fill: white" text="battle-ship"/>
+            <Label id="title" text="battle-ship"/>
         </HBox>
     </top>
 
     <center>
-        <HBox alignment="CENTER"
-              fillHeight="false">
-            <OceanGrid styleClass="grid-pane" id="ocean"
-                       prefWidth="300"
-                       prefHeight="300">
+        <StackPane maxWidth="360"
+                   maxHeight="360">
+            <Grid styleClass="grid">
+            </Grid>
+            <OceanGrid styleClass="ocean-grid"
+                       id="ocean"
+                       maxWidth="300"
+                       maxHeight="300">
             </OceanGrid>
-        </HBox>
+        </StackPane>
     </center>
+
     <bottom>
         <VBox alignment="TOP_CENTER"
-              fillWidth="false">
-            <TextArea
+              fillWidth="false"
+              spacing="20">
+            <Label id="info"
+                   prefWidth="300"
+                   prefHeight="100"
+                   mouseTransparent="true">
+
+            </Label>
+            <TextField
                     id="console"
                     prefWidth="300"
-                    prefHeight="150">
-                <VBox.margin>
-                    <Insets left="20" right="20"/>
-                </VBox.margin>
-            </TextArea>
+                    prefHeight="20">
+            </TextField>
             <HBox prefHeight="100"
                   alignment="CENTER">
                 <Button id="back"

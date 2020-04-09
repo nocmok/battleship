@@ -1,13 +1,7 @@
-/*#37474f #b0bec5*/
-
-/** fonts
- background #C7EBFF
- foreground #1273EB
- */
 {
     deepGray: #1a1a1d
 ;
-    deeepGray: #111112
+    deeepGray: #17171a
 ;
     smoke: #4e4e50
 ;
@@ -17,6 +11,10 @@
 
 .root {
     -fx-background-color: deepGray;
+}
+
+.label{
+    -fx-font-family: Consolas;
 }
 
 .button {
@@ -31,16 +29,23 @@
     -fx-text-fill: blood;
 }
 
-.grid-pane Line {
-    -fx-stroke: smoke;
-    -fx-stroke-width: 1;
-}
-
-.grid-pane {
+.ocean-grid {
     -fx-background-color: deeepGray;
 }
 
-.text-area {
+.ocean-grid Line {
+    -fx-stroke: smoke;
+    -fx-stroke-width: 0.8;
+}
+
+.grid Label{
+    -fx-font-family: Consolas;
+    -fx-font-weight: normal;
+    -fx-text-fill: smoke;
+    -fx-font-size: 15;
+}
+
+.text-field, .text-field .content, .text-field:focused, .text-field:focused .content {
     -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
     -fx-border-radius: 25, 25, 25, 25;
     -fx-font-size: 15;
@@ -48,26 +53,16 @@
     -fx-font-family: Consolas;
 }
 
-.text-area .content {
+#info{
     -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
     -fx-border-radius: 25, 25, 25, 25;
-    -fx-font-size: 15;
-    -fx-text-fill: blood;
     -fx-font-family: Consolas;
+    -fx-text-fill: blood;
+    -fx-font-size: 15;
 }
 
-.text-area:focused {
-    -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
-    -fx-border-radius: 25, 25, 25, 25;
-    -fx-font-size: 15;
-    -fx-text-fill: blood;
+#title{
     -fx-font-family: Consolas;
-}
-
-.text-area:focused .content {
-    -fx-background-color: deeepGray, deeepGray, deeepGray, deeepGray;
-    -fx-border-radius: 25, 25, 25, 25;
-    -fx-font-size: 15;
-    -fx-text-fill: blood;
-    -fx-font-family: Consolas;
+    -fx-font-size: 24;
+    -fx-text-fill: white;
 }
