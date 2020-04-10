@@ -7,24 +7,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/battleship/MainScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/TrainingGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/battleship/TrainingGameScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/Grid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/Grid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/OceanGrid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/OceanGrid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/gamemods/TrainingSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/battleship/gamemods/TrainingSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/layout/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/layout/training_game_scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/main/res/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/layout/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/main/res/layout/training_game_scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/res/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/layout/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/res/layout/training_game_scene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BattleShip/training_game_scene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/META-INF/BattleShip.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/BattleShipApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/MenuScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/TrainingGameScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/Grid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/NumericGrid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/OceanGrid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/controls/ShipPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/game/Battleship.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/game/Cruiser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/game/Destroyer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/game/EmptySea.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/game/Ocean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/game/Ship.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/game/Submarine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/gamemods/PvPSession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/gamemods/TrainingSession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/player/Bundle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/player/Player$PlayerResponseHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/player/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/battleship/player/RemotePlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/hit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/layout/main_scene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/layout/training_game_scene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/layout/main_scene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/layout/training_game_scene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/pics/empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/pics/hit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/pics/miss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/pics/nautic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/pics/sunk_horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main/res/pics/sunk_vertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/main_scene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/miss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/nautic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/pics/empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/pics/hit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/pics/miss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/pics/nautic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/pics/sunk_horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/pics/sunk_vertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/layout/main_scene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/layout/training_game_scene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/pics/empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/pics/hit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/pics/miss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/pics/nautic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/pics/sunk_horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/res/pics/sunk_vertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/sunk_horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/sunk_vertical.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BattleShip/training_game_scene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/BattleShipApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/BattleShipApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/MenuScene.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/battleship/TrainingGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/TrainingGameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/controls/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/controls/NumericGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/controls/OceanGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/controls/OceanGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/gamemods/TrainingSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/gamemods/TrainingSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/battleship/controls/ShipPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/battleship/controls/ShipPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/training_game_scene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/training_game_scene.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,7 +158,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/res/pics" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -121,15 +167,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\uporo\source\BattleShip\src\main\res\pics" />
+      <recent name="C:\Users\uporo\source\BattleShip\src\main" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\uporo\source\BattleShip\src\main\java" />
       <recent name="C:\Users\uporo\source\BattleShip\src\main\res\pics" />
       <recent name="C:\Users\uporo\source\BattleShip\src\main\res\battleship" />
       <recent name="C:\Users\uporo\source\BattleShip\src\battleship" />
       <recent name="C:\Users\uporo\source\BattleShip\src\res\pics" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\uporo\source\BattleShip\src\main\res\pics" />
-      <recent name="C:\Users\uporo\source\BattleShip\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,7 +281,8 @@
       <workItem from="1586345806221" duration="35000" />
       <workItem from="1586346950263" duration="42409000" />
       <workItem from="1586431912151" duration="12544000" />
-      <workItem from="1586451041919" duration="5682000" />
+      <workItem from="1586451041919" duration="5955000" />
+      <workItem from="1586511883067" duration="7288000" />
     </task>
     <servers />
   </component>

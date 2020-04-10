@@ -18,8 +18,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 
-import java.awt.Rectangle;
-import java.io.File;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
@@ -35,8 +33,8 @@ public class TrainingGameScene extends Scene {
     public TrainingGameScene() throws Exception {
         super(placeHolder);
 
-        URL url = Thread.currentThread().getContextClassLoader().getResource("training_game_scene.fxml");
-        if (url == null || !new File(url.getPath()).exists()) {
+        URL url = BattleShipApp.getMainApp().getResourceAsURL("training_game_scene.fxml");
+        if (url == null) {
             return;
         }
         setRoot(FXMLLoader.load(url));
@@ -63,8 +61,7 @@ public class TrainingGameScene extends Scene {
     }
 
     private void onBackButtonClicked(MouseEvent e) {
-        BattleShipApp app = BattleShipApp.app;
-        app.primaryStage.setScene(app.menuScene);
+        BattleShipApp.getMainApp().setScene(BattleShipApp.MAIN_SCENE);
     }
 
     private boolean validateInteger(String num) {
@@ -163,11 +160,12 @@ public class TrainingGameScene extends Scene {
     private Image getImageForStatus(int status, boolean isHorizontal) {
         switch (status) {
         case Ocean.HIT:
-            return ShipPane.hitImage;
+            return BattleShipApp.getMainApp().getImageById(BattleShipApp.HIT_IMAGE);
         case Ocean.MISS:
-            return ShipPane.missImage;
+            return BattleShipApp.getMainApp().getImageById(BattleShipApp.MISS_IMAGE);
         case Ocean.SUNK:
-            return isHorizontal ? ShipPane.sunkHorizontalImage : ShipPane.sunkVerticalImage;
+            return isHorizontal ? BattleShipApp.getMainApp().getImageById(BattleShipApp.SUNK_HORIZONTAL_IMAGE) :
+                   BattleShipApp.getMainApp().getImageById(BattleShipApp.SUNK_VERTICAL_IMAGE);
         case Ocean.UNTOUCHED:
         default:
             return null;
